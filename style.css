@@ -246,7 +246,7 @@ main{
     height: 150px;
     padding: 18px 20px;
     background: radial-gradient(#17051F, transparent 50%);
-    border: 1px solid var(--fundo-secundario);
+    border: 1px solid var(--roxo-escuro);
     border-radius: 9px;
     overflow: hidden;
     cursor: pointer;
@@ -349,14 +349,207 @@ main{
 .main-lives-profiles h2, .main-tree .main-lives:not(:first-child) h2{
     margin-bottom: 3px;
     color: var(--branco);
-    font-size: 10px;
+    font-size: 7px;
 }
 
 .main-lives-profiles span, .main-tree .main-lives:not(:first-child) span{
-    display: inline-block;
+    display: flex
     margin: 2px 4px 2px 0;
     color: var(--roxo-claro);
-    font-size: 10px;
+    font-size: 7px;
 }
 
 /* Nossas sessoes */
+
+.main-for{
+    grid-row: 3;
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+.main-sessões{
+    margin-bottom: 10px;
+}
+
+.main-sessões  i{
+    display: inline-block;
+    margin: 0 0 5px;
+    color: var(--verde);
+    font-size: 23px;
+}
+
+.main-sessões > h2:nth-of-type(2){
+    margin-top: 0;
+    color: var(--verde);
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.main-other-videos{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.main-other-videos  div{
+    min-width: 0;
+    padding: 5px;
+    background: var(--fundo-secundario);
+    border: 1px solid var(--roxo-escuro);
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.main-other-videos div:hover{
+    border-color: var(--roxo-claro);
+    box-shadow: 0 0 12px #A970FF33;
+    transform: translateY(-2px);
+}
+
+.main-other-videos img{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 6px;
+    object-fit: cover;
+    background: var(--roxo-escuro);
+    border-radius: 4px;
+}
+
+.main-other-videos h2{
+    margin-bottom: 4px;
+    color: var(--verde);
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.main-other-videos p{
+    color: var(--roxo-claro);
+    font-size: 8px;
+    line-height: 1.3;
+}
+
+/* Competição */
+
+.main-five{
+    grid-column: 1 / -1;
+    grid-row: 4;
+    width: 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: stretch;
+    gap: 12px;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(var(--roxo-escuro), var(--roxo-claro) 45%, var(--fundo-secundario));
+    border-top: 1px solid var(--roxo-claro);
+    border-bottom: 1px solid var(--roxo-escuro);
+}
+
+.main-banner-award-infos-one{
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    padding: 12px;
+    background: #10001855;
+    border: 1px solid #A970FF66;
+    border-radius: 8px;
+}
+
+.main-banner-award-infos-one h2{
+    margin-bottom: 8px;
+    color: var(--branco);
+    font-size: 25px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.main-banner-award-infos-one h3{
+    margin-bottom: 5px;
+    color: var(--branco);
+    font-size: 11px;
+}
+
+.main-banner-award-infos-one h3:nth-of-type(2){
+    color: var(--branco);
+    font-size: 30px;
+    text-shadow: 0 0 12px var(--cinza);
+}
+
+.main-banner-award-infos-one p, .main-banner-award-infos-two- p{
+    margin-top: 8px;
+    color: var(--branco);
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.main-banner-award-infos-two- h2{
+    margin-bottom: 8px;
+    color: var(--branco);
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.main-calendar{
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    min-width: 0;
+}
+
+.calendar{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    background: var(--fundo-secundario);
+    border: 1px solid var(--roxo-claro);
+    border-radius: 8px;
+}
+
+.main-date p, .main-time p, .main-chanel p{
+    color: var(--branco);
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.calendar  hr{
+    grid-column: 1 / -1;
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--roxo-escuro);
+}
+
+.main-vertical-line{
+    display: none;
+}
+
+.main-chanel{
+    grid-column: 1 / -1;
+}
+
+.main-chanel span{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    padding: 8px 10px;
+    color: var(--branco);
+    background: var(--roxo);
+    border-radius: 6px;
+    font-size: 9px;
+    transition: 0.3s;
+}
+
+.main-chanel span:hover {
+    background: var(--roxo-claro);
+    box-shadow: 0 0 12px var(--roxo-escuro);
+}
+
+/* Footer */
+
