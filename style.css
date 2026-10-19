@@ -20,7 +20,7 @@ body{
     background: var(--fundo);
     color: var(--branco);
     font-family: 'Inter', sans-serif;
-    font size: 14px;
+    font-size: 14px;
 }
 
 a{
